@@ -4742,6 +4742,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62550aa43ffecf14b972c2d80b8958c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  gameTime: 0
+  maxGameTime: 20
   player: {fileID: 1404292140}
   pool: {fileID: 1561063741}
 --- !u!4 &329808442
@@ -5020,7 +5022,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5.5277777
+  orthographic size: 9.930555
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -5065,8 +5067,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.2D.Runtime::UnityEngine.Rendering.Universal.PixelPerfectCamera
   m_ComponentVersion: 1
   m_AssetsPPU: 18
-  m_RefResolutionX: 120
-  m_RefResolutionY: 140
+  m_RefResolutionX: 135
+  m_RefResolutionY: 270
   m_CropFrame: 0
   m_GridSnapping: 0
   m_FilterMode: 0
@@ -5173,6 +5175,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spawner
   spawnPoint: []
+  spawnData:
+  - spawnTime: 0.7
+    spriteType: 0
+    health: 10
+    speed: 1.5
+  - spawnTime: 0.2
+    spriteType: 1
+    health: 15
+    speed: 2.4
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -10556,7 +10567,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PoolManager
   prefabs:
-  - {fileID: 5894292833022334022, guid: 51f9bda8c3f067e42be4b86064776f02, type: 3}
   - {fileID: 2682945864187001865, guid: 0486aa2f5d935a84fba1155dfad0292d, type: 3}
 --- !u!4 &1561063742
 Transform:
