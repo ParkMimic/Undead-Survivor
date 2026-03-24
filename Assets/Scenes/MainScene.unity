@@ -5022,7 +5022,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 9.416667
+  orthographic size: 9.305555
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -5386,9 +5386,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Weapon
   id: 0
   prefabId: 1
-  damage: 11
+  damage: 5
   count: 2
-  speed: 150
+  speed: 0
 --- !u!1 &744986316
 GameObject:
   m_ObjectHideFlags: 0
@@ -10153,6 +10153,7 @@ GameObject:
   - component: {fileID: 1404292140}
   - component: {fileID: 1404292141}
   - component: {fileID: 1404292142}
+  - component: {fileID: 1404292143}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -10263,6 +10264,7 @@ Transform:
   - {fileID: 1542914458}
   - {fileID: 532502305}
   - {fileID: 689444934}
+  - {fileID: 2100022799}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &1404292139
@@ -10316,6 +10318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Player
   inputVec: {x: 0, y: 0}
   speed: 3
+  scanner: {fileID: 0}
 --- !u!114 &1404292141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10368,6 +10371,23 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1404292143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404292135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c3388ade109b6a4c86de6801aff96de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Scanner
+  scanRange: 7
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  nearestTarget: {fileID: 0}
 --- !u!1 &1432934890
 GameObject:
   m_ObjectHideFlags: 0
@@ -10619,6 +10639,7 @@ MonoBehaviour:
   prefabs:
   - {fileID: 2682945864187001865, guid: 0486aa2f5d935a84fba1155dfad0292d, type: 3}
   - {fileID: 1548903688430573631, guid: 1217afde27935e34c8bd79b723a69335, type: 3}
+  - {fileID: 9034980156649893377, guid: ba09e0f6d8a21f348a5e085f9d103351, type: 3}
 --- !u!4 &1561063742
 Transform:
   m_ObjectHideFlags: 0
@@ -19824,6 +19845,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Cinemachine::Cinemachine.CinemachinePipeline
+--- !u!1 &2100022798
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2100022799}
+  - component: {fileID: 2100022800}
+  m_Layer: 0
+  m_Name: Weapon 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2100022799
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100022798}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1404292138}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2100022800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100022798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fa2bf59f022827499ff5ea61d86831d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Weapon
+  id: 1
+  prefabId: 2
+  damage: 3
+  count: 1
+  speed: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
