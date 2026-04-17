@@ -22,20 +22,26 @@ public class Player : MonoBehaviour
         scanner = GetComponent<Scanner>();
         hands = GetComponentsInChildren<Hand>(true);
     }
-
+ 
     void OnMove(InputValue value)
     {
+        if (!GameManager.instance.isLive) return;
+
         inputVec = value.Get<Vector2>();
     }
 
     private void FixedUpdate()
     {
+        if (!GameManager.instance.isLive) return;
+
         Vector2 nextVec = inputVec * speed * Time.fixedDeltaTime;
         rigid.MovePosition(rigid.position + nextVec);
     }
 
     private void LateUpdate()
     {
+        if (!GameManager.instance.isLive) return;
+
         anim.SetFloat("Speed", inputVec.magnitude);
 
         if (inputVec.x != 0)
